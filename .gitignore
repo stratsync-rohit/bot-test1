@@ -1,7 +1,19 @@
-.env
-.venv/
 venv/
+.venv/
+
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+
+# Python build/cache artifacts
 __pycache__/
 *.py[cod]
+*.egg-info/
 .pytest_cache/
+
+# Local development logs
+*.log
+
+# macOS metadata
 .DS_Store
