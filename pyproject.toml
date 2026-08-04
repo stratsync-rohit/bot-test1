@@ -3,18 +3,15 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "stratsync-risk-bot"
+name = "fastapi-azure-app"
 version = "0.1.0"
-description = "Microsoft Teams Risk Notification Bot"
+description = "FastAPI application deployed to Azure App Service"
 requires-python = ">=3.12"
 dependencies = [
-    "aiohttp",
-    "microsoft-teams-apps==2.0.14",
-    "python-dotenv",
+    "fastapi",
+    "uvicorn[standard]",
+    "gunicorn",
 ]
-
-[tool.setuptools]
-packages = ["src"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
